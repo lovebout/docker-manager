@@ -70,43 +70,6 @@ npm run star
 
 
 
-### 项目本地调试
-**docker-manager-vue（前端）**
-
-   在 docker-manager-vue 目录下执行
-
-``` javascript
-npm install
-npm run serve
-```
-指向2个后端的接口地址请查看main.js 和 Container.vue 文件中的注释。部署和本地运行这里不同。
-
-**docker-manager-flask（后端）**
-
-   在 docker-manager-flask 目录下执行
-
-``` shell
-pip install -r requirements.txt
-python app.py
-```
-**docker-manager-exec（后端）**
-
-   在 docker-manager-exec 目录下执行
-
-``` shell
-pip install -r requirements.txt
-python app.py
-```
- **docker-manager-client（客户端）**
- 
- 将目录下main.js中的服务地址替换为对应的前端地址 mainWindow.loadURL('/')
-  在 docker-manager-client 目录下执行
-``` javascript
-npm install
-npm run star
-```  
-
-
 ### 项目部署
  1. 构建镜像
 	 每个子项目下都已经写好了Dockerfile,直接进行镜像构建即可。
