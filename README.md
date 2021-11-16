@@ -19,6 +19,46 @@ docker可视化管理平台，使用vue + python flask 前后端分离实现。
 <br>
 这里需要说下项目结构。后端框架都是flask，但是分了两个后端。原因是在做动态日志的时候后端使用了flask-socketio这个库，而进入容器操作其实就是一个web terminal，这个功能参考网上使用了flask-sockets库,这两个库不兼容无法同时使用。
 
+
+
+
+
+**#安装环境**
+dnf install epel-release unzip npm python3 python3-devel -y
+ln -sf /usr/bin/python3 /usr/bin/python
+pip3 install --upgrade pip
+
+**#解压文件**
+mkdir -p /www/server
+unzip -d /www/server docker-manager-master.zip
+
+**#进入目录编译docker-manager-vue（前端）**
+
+cd /www/server/docker-manager-master/docker-manager-vue
+npm install
+npm run serve
+
+**#进入目录编译docker-manager-flask（后端）**
+cd /www/server/docker-manager-master/docker-manager-flask
+pip install -r requirements.txt
+python app.py
+
+**#进入目录编译docker-manager-exec（后端）**
+pip install -r requirements.txt
+python app.py
+
+**#进入目录编译docker-manager-client（客户端）**
+npm install
+npm run star
+
+
+
+
+
+
+
+
+
 ### 项目本地调试
 **docker-manager-vue（前端）**
 
