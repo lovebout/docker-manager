@@ -24,11 +24,13 @@ docker可视化管理平台，使用vue + python flask 前后端分离实现。
 
 
 ### 安装环境
+``` shell
 dnf install epel-release unzip npm python3 python3-devel -y
 ln -sf /usr/bin/python3 /usr/bin/python
 pip3 install --upgrade pip
+```
 
-### 解压文件
+### 解压文件 安装到/www/server目录
 ``` shell
 mkdir -p /www/server
 unzip -d /www/server docker-manager-master.zip
