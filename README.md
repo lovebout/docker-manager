@@ -32,22 +32,22 @@ pip3 install --upgrade pip
 mkdir -p /www/server
 unzip -d /www/server docker-manager-master.zip
 
-**#进入目录编译docker-manager-vue（前端）**
+### 进入目录编译docker-manager-vue（前端）
 
 cd /www/server/docker-manager-master/docker-manager-vue
 npm install
 npm run serve
 
-**#进入目录编译docker-manager-flask（后端）**
+### 进入目录编译docker-manager-flask（后端）
 cd /www/server/docker-manager-master/docker-manager-flask
 pip install -r requirements.txt
 python app.py
 
-**#进入目录编译docker-manager-exec（后端）**
+### 进入目录编译docker-manager-exec（后端）
 pip install -r requirements.txt
 python app.py
 
-**#进入目录编译docker-manager-client（客户端）**
+### 进入目录编译docker-manager-client（客户端）
 npm install
 npm run star
 
